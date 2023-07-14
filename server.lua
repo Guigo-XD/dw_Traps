@@ -48,7 +48,7 @@ AddEventHandler('dw_traps:giveitem', function(tipo)
 			local ItemInfo = data.getItemData('smallfish')
 			local itemWeight = ItemInfo.weight * count
 			local itemWeightformat = string.format("%.2f", itemWeight)
-			TriggerClientEvent("redemrp_notification:start", _source, 'You pegou '..count..' peixe pequeno ('..itemWeightformat.. 'kg)', 5)
+            TriggerClientEvent("redem_roleplay:NotifyLeft", _source, "Voce pegou", ''..count..' peixe pequeno ('..itemWeightformat.. 'kg)', "generic_textures", "tick", 3000)
         end
     end)
     ItemData.AddItem(count)

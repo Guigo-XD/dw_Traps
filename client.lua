@@ -146,7 +146,7 @@ AddEventHandler('dw_traps:placetrap', function(itemn, hash)
                 isPlacing= false
                 break
               else
-                TriggerEvent("redemrp_notification:start", 'Não está na agua!', 5)
+                TriggerEvent("redem_roleplay:ShowSimpleRightText", 'Não está na agua!', 5)
                 end
             end
                 
@@ -170,7 +170,7 @@ AddEventHandler('dw_traps:armtrap', function(itemn, hash)
         
         for k, v in ipairs(myTraps) do
             if v.stage == 0 then
-                if GetDistanceBetweenCoords(v.x, v.y, v.z, pos.x, pos.y, pos.z, true) < 2.0 then
+                if GetDistanceBetweenCoords(v.x, v.y, v.z, pos.x, pos.y, pos.z, true) < 1.0 then
                     object = v.object
                     key = k
                     x, y, z = v.x, v.y, v.z
